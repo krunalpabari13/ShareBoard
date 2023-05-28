@@ -4,7 +4,7 @@ export default function Card1(props) {
     const {btncolor}=props;
   return (
     <div className="mt-4">
-    <div className="card ms-auto me-auto" style={{ width: "69.2rem" }}>
+    <div className="card ms-auto me-auto" style={{ width: "64.2rem" }}>
     { props.img && <img src={props.img} className="card-img-top" alt="..." />}
       <div className="card-body row">
         <div className='d-flex col-12 mt-2 ps-5 pt-3'>

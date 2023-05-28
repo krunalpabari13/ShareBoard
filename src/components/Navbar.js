@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Navbar() {
   return (
-    <div>
+    <div className=''>
 
-        <nav className="navbar row" style={{backgroundColor:'#ffff'}}>
+        <nav className="navbar fixed-top" style={{backgroundColor:'#ffff'}}>
   <div className="container-fluid">
     <div class>
     <a className="navbar-brand ps-5" href="#">
@@ -28,7 +28,7 @@ export default function Navbar() {
   
     <div className='pe-4' style={{fontSize:'1vw'}}>
     <div>
-        Create account.<b className='text-primary ' > It's free<img src='dropdown.png ' className='ps-1'></img></b>
+        Create account.<b className='text-primary ' > It's free <img src='dropdown.png ' className='ps-1'></img></b>
 
     </div>
   </div>

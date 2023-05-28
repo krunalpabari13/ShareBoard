@@ -23,6 +23,12 @@ html{
     margin-bottom: 10.7rem;
     bottom: 0;
 }
+.tabs{
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #8A8A8A;
+}
+
 @media only screen and (max-width:628px) {
     html{
         font-size: 27%;
