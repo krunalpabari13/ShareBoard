@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function Navbar() {
@@ -28,7 +29,7 @@ export default function Navbar() {
   
     <div className='pe-4' style={{fontSize:'1vw'}}>
     <div>
-        Create account.<b className='text-primary ' > It's free <img src='dropdown.png ' className='ps-1'></img></b>
+        Create account<b className='text-primary ' > <Link href='/Login'>It's free</Link> <img src='dropdown.png ' className='ps-1 image-container' ></img></b>
 
     </div>
   </div>

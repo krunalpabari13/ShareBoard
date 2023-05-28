@@ -6,6 +6,7 @@ export default function Post() {
       <div className="mt-5 pt-5">
         <button
           type="text"
+          className="col-6"
           style={{
             background: "#ffff",
             border: "none",
@@ -42,7 +43,7 @@ export default function Post() {
       </div>
 
          <div className="mt-5 ms-3 pt-5">
-            <img src="recommended.png"></img>
+            <img src="recommended.png" ></img>
             <span className="ms-2 mt-5" style={{fontSize:'1.4rem',fontWeight:400,letterSpacing:'10%'}} >RECOMMENDED GROUPS</span>
         </div>
         <div className='pt-2 ms-3'>

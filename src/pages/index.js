@@ -7,7 +7,8 @@ import Card from '@/components/Card'
 import Card1 from '@/components/Card1'
 import Topbar from '@/components/Topbar'
 import Post from '@/components/Post'
-import Login from '@/components/Login'
+import Login from '@/pages/Login'
+import Modal from '@/components/Modal'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -28,7 +29,7 @@ export default function Home() {
    </div>
    </div>
 
-   <Login></Login>
+   
     </div>
 
   )
