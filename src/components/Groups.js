@@ -3,7 +3,7 @@ import { useEffect,useState } from 'react';
 export default function Groups(props) {
 const [follow,setFollow]=useState('Follow');
 useEffect(()=>{
-    setFollow('Follow')
+   
 },[follow])
 
 
