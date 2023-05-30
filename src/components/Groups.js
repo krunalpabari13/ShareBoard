@@ -2,9 +2,6 @@ import React from 'react'
 import { useEffect,useState } from 'react';
 export default function Groups(props) {
 const [follow,setFollow]=useState('Follow');
-useEffect(()=>{
-   
-},[follow])
 
 
     let btnclick=(e)=>{

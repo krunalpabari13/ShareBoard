@@ -1,12 +1,21 @@
+  @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
+
 html{
     font-size: 62.5%;
+    overflow-x: hidden;
+    
 }
+body{
+    font-family: 'Monomaniac One', sans-serif;
+}
+
 .stretch{
-    background-size:contain;
+    background-size:cover;
 
     background-repeat: no-repeat;
     width: 100%;
     background-position: center;
+
 }
 .imgtext1{
     font-size: 3.6rem;
@@ -71,8 +80,29 @@ html{
         font-size: 29.5%;
     }
 }
+@media only screen and (max-width:575px) {
+    
+}
 @media only screen and (max-width:500px) {
     html{
         font-size: 26.5%;
+    }
+
+}
+
+@media only screen and (max-width:400px) {
+    html{
+        font-size: 22.5%;
+    }
+}
+@media only screen and (max-width:300px) {
+    html{
+        font-size: 20.5%;
+    }
+}
+
+@media only screen and (max-width:200px) {
+    html{
+        font-size: 15.5%;
     }
 }

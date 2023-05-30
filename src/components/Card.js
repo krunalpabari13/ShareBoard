@@ -1,9 +1,9 @@
 import React from "react";
-
+import { useState,useEffect } from "react";
 export default function Card(props) {
   return (
     <div className="mt-4 ">
-      <div className="card   me-auto ms-auto  " style={{ width: "64.2rem" }}>
+      <div className="card   me-auto ms-auto " style={{width:'64.2rem'}} >
         <img src={props.img} className="card-img-top" alt="..." />
         <div className="card-body row">
         <div className='d-flex col-12 mt-2 ps-5 pt-3'>

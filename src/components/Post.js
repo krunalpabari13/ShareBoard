@@ -2,7 +2,7 @@ import React from "react";
 import Groups from "./Groups";
 export default function Post() {
   return (
-    <div>
+    <div className="d-none d-sm-block">
       <div className="mt-5 pt-5">
         <button
           type="text"

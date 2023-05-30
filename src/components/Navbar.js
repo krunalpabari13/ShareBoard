@@ -7,6 +7,7 @@ export default function Navbar() {
   const [show, setShow] = useState(false);
   const [login,setLogin]=useState(false);
   const [signup,setSignup]=useState(true);
+  const [loggedin,setLoggedIn]=useState(true);
  
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -23,8 +24,12 @@ export default function Navbar() {
         setLogin(false);
       }
   }
+  const userLoggedIn=()=>{
+    setLoggedIn(false)
+    handleClose();
+  }
   return (
-    <div className=''>
+    <div className='d-none d-sm-block'>
 
         <nav className="navbar fixed-top" style={{backgroundColor:'#ffff'}}>
   <div className="container-fluid">
@@ -48,9 +53,30 @@ export default function Navbar() {
     </div>
   
   
-    <div className='pe-4' style={{fontSize:'1vw'}}>
+    <div className='pe-4' style={{fontSize:'1.6rem'}}>
     <div>
-        Create account<b className='text-primary ' > <a onClick={handleShow}>It's free</a>  <img src='dropdown.png' className='position-absolute mt-3 me-2 '  style={{height:'0.4rem',width:'0.9rem',right:0}}></img></b>
+      {loggedin &&  <span>  Create Account<b className='text-primary ' > <a onClick={handleShow}>It's free</a></b>
+      <img src='dropdown.png' className='position-absolute mt-3 me-2 '  style={{height:'0.4rem',width:'0.9rem',right:0}}></img>
+      </span>} 
+      {!loggedin && 
+      <div className='d-flex position-relative'>
+      <div className="col-1">
+              <img
+                src="siddharth.png"
+                class="rounded-circle"
+                style={{ width: "2.8rem" }}
+                alt="Avatar"
+              />
+            </div>
+            <div
+              className=" col-8 ms-5 mt-2"
+              style={{ fontSize: "1.2rem", fontWeight: 600 }}
+            >
+              Siddharth Goyal
+            </div>
+            <img src='dropdown.png' className='position-absolute mt-4 ms-2 '  style={{height:'0.4rem',width:'0.9rem',right:0}}></img>
+          
+      </div>}
 
     </div>
   </div>
@@ -89,7 +115,7 @@ export default function Navbar() {
             <input type="password" style={{background:'#F7F8FA',color:'#8A8A8A',fontSize:'1.5rem',fontWeight:500 ,width:'32rem',height:'4.6rem'}}aria-label="First name" placeholder='Password' class="form-control"/>
             <input type="password" style={{background:'#F7F8FA',color:'#8A8A8A',fontSize:'1.5rem',fontWeight:500 ,width:'32rem',height:'4.6rem'}}aria-label="First name" placeholder='Confirm Password' class="form-control"/>
             <div className='col-12 mt-5'>
-                <button className='btn btn-primary rounded-pill btn-lg container'>Create Account</button>
+                <button className='btn btn-primary rounded-pill btn-lg container' onClick={userLoggedIn}>Create Account</button>
             </div>
             <div className='mt-5'></div>
             <div className='col-12 mt-5'>
@@ -149,7 +175,7 @@ export default function Navbar() {
             <input type="email" style={{background:'#F7F8FA',color:'#8A8A8A',fontSize:'1.5rem',fontWeight:500 ,width:'32rem',height:'4.6rem'}}aria-label="First name" placeholder='Email' class="form-control"/>
             <input type="password" style={{background:'#F7F8FA',color:'#8A8A8A',fontSize:'1.5rem',fontWeight:500 ,width:'32rem',height:'4.6rem'}}aria-label="First name" placeholder='Password' class="form-control"/>
             <div className='col-12 mt-5'>
-                <button className='btn btn-primary rounded-pill btn-lg container'>Create Account</button>
+                <button className='btn btn-primary rounded-pill btn-lg container' onClick={userLoggedIn}>Create Account</button>
             </div>
             <div className='mt-5'></div>
             <div className='col-12 mt-5'>
