@@ -1,12 +1,27 @@
-import Link from 'next/link'
-import React from 'react'
-import Signup from './Signup'
+import React, { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import Link from 'next/link';
+export default function Modal2() {
+    const [show, setShow] = useState(false);
+    const [signup,setSignup]=useState(true);
 
-export default function Login() {
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+  
   return (
-    
-    <div >
-       <div class="card container" style={{width: '80rem'}}>
+   <>
+    <Button variant="primary" onClick={handleShow}>
+    Launch demo modal
+  </Button>
+  { {signup} &&
+  <Modal show={show} onHide={handleClose} style={{position:'fixed',top:'10%',transfor:'translate(-10%,-10%)'}}>
+  
+  
+ 
+  <div class="card container" style={{width: '80rem'}}>
+  <Modal.Header closeButton >
+  <Modal.Title>
         <div className='container mt-3' style={{fontWeight:500,fontSize:'1.4rem',color:'#008A45'}}>
         Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼
         </div>
@@ -14,9 +29,11 @@ export default function Login() {
             <div className='col-6' style={{fontWeight:700, fontSize:'2.4rem'}}>Create Account</div>
             <div className='col-6 mt-3' style={{fontWeight:600, fontSize:'1.3rem'}}>Already have an account? <span className='text-primary'><Link href='/Signup'>Sign In</Link></span></div>
         </div>
-     
+    </Modal.Title>
+        </Modal.Header>
+        <Modal.Body >
         <div className='row'>
-            <div className='col-5 mt-5 ms-2'>
+            <div className='col-5 '>
             <div class="input-group" style={{background:'#D9D9DB',width:'32rem',height:'4.6rem'}}>
             
             <input type="text" style={{background:'#F7F8FA',color:'#8A8A8A',fontSize:'1.5rem',fontWeight:500 }} aria-label="First name" placeholder='First Name' class="form-control"/>
@@ -39,15 +56,19 @@ export default function Login() {
             
             <div className='col-6'>
                 <img src='loginimg.png' className='img-fluid'></img>
-                <div className='ms-5'>By signing up, you agree to our Terms & conditions, Privacy policy{Signup}</div>
+                <div className='ms-5'>By signing up, you agree to our Terms & conditions, Privacy policy</div>
             </div>
 
 
            
         </div>
+        </Modal.Body>
         
      </div>
      
-    </div>
+    
+    </Modal>}
+
+  </>
   )
 }
