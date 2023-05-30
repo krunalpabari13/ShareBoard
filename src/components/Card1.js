@@ -1,10 +1,31 @@
 import React from 'react'
-
+import { useEffect,useState } from 'react';
 export default function Card1(props) {
     const {btncolor}=props;
+    const [windowWidth, setWindowWidth] = useState(undefined);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+  
+      if (typeof window !== 'undefined') {
+        window.addEventListener('resize', handleResize);
+        setWindowWidth(window.innerWidth);
+      }
+  
+      return () => {
+        if (typeof window !== 'undefined') {
+          window.removeEventListener('resize', handleResize);
+        }
+      };
+    }, []);
+  
+    const elementWidth = windowWidth && windowWidth <= 575 ? '100%' : '64.2rem';
+
   return (
     <div className="mt-4">
-    <div className="card ms-auto me-auto" style={{ width: "64.2rem" }}>
+    <div className="card ms-auto me-auto" style={{ width:elementWidth }}>
     { props.img && <img src={props.img} className="card-img-top" alt="..." />}
       <div className="card-body row">
         <div className='d-flex col-12 mt-2 ps-5 pt-3'>
