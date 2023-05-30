@@ -8,13 +8,13 @@ export default function Navbar() {
         <nav className="navbar fixed-top" style={{backgroundColor:'#ffff'}}>
   <div className="container-fluid">
     <div class>
-    <a className="navbar-brand ps-5" href="#">
+    <a className=" ps-5" href="#">
       <img
         src="mainlogo.png"
         alt="Logo"
-        height={'25rem'}
+        height={'22rem'}
         width={'110rem'}
-        className=" "
+        className="img-fluid"
       />
     </a>
     </div>
@@ -29,7 +29,7 @@ export default function Navbar() {
   
     <div className='pe-4' style={{fontSize:'1vw'}}>
     <div>
-        Create account<b className='text-primary ' > <Link href='/Login'>It's free</Link> <img src='dropdown.png ' className='ps-1 image-container' ></img></b>
+        Create account<b className='text-primary ' > <Link href='/Login'>It's free</Link>  <img src='dropdown.png' className='position-absolute mt-3 me-2 '  style={{height:'0.4rem',width:'0.9rem',right:0}}></img></b>
 
     </div>
   </div>

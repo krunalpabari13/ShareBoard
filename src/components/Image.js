@@ -12,7 +12,7 @@ export default function Image() {
           </div>
        
         </div>
-        <img src="laptopimage.png" className="img-fluid stretch" ></img>
+        <img src="laptopimage.png" className=" stretch" ></img>
        
       </div>
     </>

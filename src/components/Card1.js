@@ -27,12 +27,12 @@ export default function Card1(props) {
         <div className='col-6 d-flex ps-5 '>
             <img
               src={props.infoimg}
-              height={20}
+              style={{width:'1.6rem',height:'1.5rem'}}
             />
             <div style={{fontWeight:'bold' , fontSize:'1.5rem'}} className='ps-2'>{props.info}</div>
         </div>
         <div className=' col-3 d-flex ps-5'>
-            <img src={props.locationimg}></img>
+        <img src="location.png" className="" style={{height:'2.5rem',width:'2.5rem'}}></img>
             <div style={{fontWeight:'bold' , fontSize:'1.5rem'}}>{props.location}</div>
         </div>
        </div>

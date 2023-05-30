@@ -2,19 +2,20 @@ html{
     font-size: 62.5%;
 }
 .stretch{
-    background-size: contain;
+    background-size:contain;
+
     background-repeat: no-repeat;
-    width: 100vw;
+    width: 100%;
     background-position: center;
 }
 .imgtext1{
-    font-size: 3vw;
+    font-size: 3.6rem;
     font-weight: 700;
     
     
 }
 .imgtext2{
-    font-size: 2vw;
+    font-size: 1.8rem;
     font-weight: 400;
     /* margin-left: 20rem; */
 }
@@ -51,24 +52,20 @@ html{
 }
 @media only screen and (max-width:1000px) {
     html{
-        font-size: 41.5%;
+        font-size: 33.5%;
     }
 }
 @media only screen and (max-width:900px) {
     html{
-        font-size: 38.5%;
+        font-size: 35.5%;
     }
 }
 @media only screen and (max-width:800px) {
     html{
-        font-size: 36.5%;
+        font-size: 26.5%;
     }
 }
-@media only screen and (max-width:700px) {
-    html{
-        font-size: 34.5%;
-    }
-}
+
 @media only screen and (max-width:600px) {
     html{
         font-size: 29.5%;
@@ -76,6 +73,6 @@ html{
 }
 @media only screen and (max-width:500px) {
     html{
-        font-size: 27.5%;
+        font-size: 26.5%;
     }
 }
